@@ -1,0 +1,57 @@
+Q1. Create a Database
+Create a database named retail_store.
+
+Q2. Create Collections
+Create collections named products, customers, and sales in the retail_store database.
+
+Q3. Insert Data
+Insert the following documents into the products collection:
+{ "productID": 1, "name": "Laptop", "category": "Electronics", "price": 1000, "stock": 50 }
+{ "productID": 2, "name": "Smartphone", "category": "Electronics", "price": 700, "stock": 100 }
+{ "productID": 3, "name": "Tablet", "category": "Electronics", "price": 500, "stock": 80 }
+{ "productID": 4, "name": "Headphones", "category": "Accessories", "price": 100, "stock": 200 }
+{ "productID": 5, "name": "Keyboard", "category": "Accessories", "price": 50, "stock": 150 }
+
+Insert the following documents into the customers collection:
+{ "customerID": 1, "name": "Alice", "age": 25, "loyaltyPoints": 100 }
+{ "customerID": 2, "name": "Bob", "age": 30, "loyaltyPoints": 200 }
+{ "customerID": 3, "name": "Charlie", "age": 35, "loyaltyPoints": 150 }
+{ "customerID": 4, "name": "David", "age": 40, "loyaltyPoints": 300 }
+{ "customerID": 5, "name": "Eve", "age": 45, "loyaltyPoints": 250 }
+
+Insert the following documents into the sales collection:
+{ "saleID": 1, "productID": 1, "customerID": 1, "date": "2023-07-01", "quantity": 1, "totalPrice": 1000 }
+{ "saleID": 2, "productID": 2, "customerID": 2, "date": "2023-07-02", "quantity": 2, "totalPrice": 1400 }
+{ "saleID": 3, "productID": 3, "customerID": 3, "date": "2023-07-03", "quantity": 1, "totalPrice": 500 }
+{ "saleID": 4, "productID": 4, "customerID": 4, "date": "2023-07-04", "quantity": 3, "totalPrice": 300 }
+{ "saleID": 5, "productID": 5, "customerID": 5, "date": "2023-07-05", "quantity": 4, "totalPrice": 200 }
+Q4. Complex Query
+Query all customers who have bought products in the "Electronics" category.
+
+Q5. Conditional Query
+Query all products that have been sold more than once.
+
+Q6. Update Data
+Update the stock of the product with productID 1 by decreasing it by the quantity sold in the sales collection.
+
+Q7. Delete Data
+Delete all sales where the total price is less than 300.
+
+Q8. Add New Field
+Add a new field called discount to the products collection and set it to 0 for all products.
+
+Q9. Create Index
+Create a compound index on the name and category fields in the products collection.
+
+Q10. Aggregation
+Use the Aggregation Framework to calculate the total sales amount for each product category.
+
+Q11. Setup Sharding
+Configure a sharded cluster for the sales collection using the customerID as the shard key.
+
+Q12. Use Transactions
+Start a session, insert a new document into the customers collection, and update the loyaltyPoints of the customer with customerID 1 to 150 within a transaction. 
+Ensure the transaction is committed if both operations succeed.
+
+Q13. Create View
+Create a view named highValueSales that includes all sales where the totalPrice is greater than 500.
